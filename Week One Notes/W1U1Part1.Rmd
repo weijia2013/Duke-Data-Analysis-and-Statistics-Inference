@@ -1,0 +1,96 @@
+---
+title: "Week 1 Notes"
+author: "Weijia Chen"
+date: "22 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+##Week One Unit One
+
+### Understanding the population and samples
+
+Population and samples are determined by the research question.
+
+####Data Matrices
+
+Each col represents earch variable, Each row represents each observation or each cases.
+
+####Variables
+
+All variables can be devided into two parts:
+
+1. Numerical variable: quantitative
+Numberical values sensible to add, subtract, take averages
+    
+    1). **_Cnotinuous_**: Take on any of an infinite number of values within a given range
+    
+    2). **_Discrete_**: Take on one of a specific set of numeric values. Examples: numbers of cars
+    
+2. Categorical variable: qualitative
+    + Categories can be identified with numbers but not sensible to do arithmetic operations
+    
+    1). **_Ordinal_**: levels have an inherent ordering
+    
+    2). **_Regular Categorical_**: 
+
+###Type of studies
+#####1. Observational
++ Collect data in a way that does not directly interfere with how the data arise
++ **_Only establish an association_**
++ **_Retrospective_** study use past data
++ **_Prospective_** study collects data throughout the study
+
+#####2. Exepriment
++ **_Randomly assign subjects treatments_**
++ Establish **_causal_** connections between variables
+
+###Sampling and Sources of Bias
+####Census:
++ Some individuals are hard to locate or measure, and these people be different from the rest of the population.
++ Populations rarely stand still.
+
+####Sampling Bias
++ **_Convenience Sample_**: Individuals who are easily accessible are more likely to be included in the sample
++ **_Non-response_**: if only a (non-random) fraction of the randomly sampled people respond to a survey such that the sample is no longer representative of the population
++ **_Voluntary response_**: Occurs when the sample consists of people who volunteer to respond because they have strong opinions on the issue
++ The differences between **_Voluntary response_** and **_Non-response_** is thatin a non-response there is a random sample that is surveyed.But, the people who choose to respond are not represented above the dample.
++ In voluntary response there is no initial random sample.
+
+####Sampling methods
+1. **_Simple random sample(SRS)_**
+    + Randomly select cases from the population, each case has equally chance to be selected.
+2. **_Stratified sample_**
+    + Each stratums are different with each other. 
+    + Then, randomly select samples from each stratum
+    + Example: divide population into two groups, male and female, two groups are totally different regarding to gender, then, randomly select objects from both group
+3. **_Cluster sample_**
+    + Each cluster are similarly to others
+    + However, within each cluster, cases are very different with others
+    + Randomly sample a few clusters, than randomly sample from within these cluster
+    
+###Experimental Design
+
+1. Control: compare treatment of interest to a control group
+2. Randomise: randomly assign subjects to treatments
+3. Replicate: collect a sufficiently large sample, or replicate the entire study
+4. Block: block for variables know or suspected to affect the outcome
+
+##### Blocking VS Explanatory variables
+1. Explanatory variables(factors) ---- conditions we can impose on experimental units; Example:energy gel
+2. Blocking variables ---- characteristics that the experimental units **_come with_**, that we would like to control for; Example: **_gender; pro and amateur athletes_**
+3. blocking is lie stratifying:
+    + blocking during random assignment
+    + stratifying during random sampling
+####Random sampling VS Random assigment
+1. **_Random Sampling_**: occurs when subjects are being selected for a study. It is the sample select method. The study results based on random sampling can be generalised and represent the population.
+2. **_Random assigment_** occurs only in experimental setting. Where cases are being assigned to rious treatments. Random assigment allows researchers to make **_causal conclusions_** based on the study.
+
+|                      | Random Assignment              | No Random Assignment               |                      |
+| -------------------- |:------------------------------:| ----------------------------------:|---------------------:|
+| Random Sampling      | Casual and generalisable       | Not casual, but generalisable      |Generalisability      |
+| No Random Sampling   | Causal, but not generaslsable  | Neither casual or generalisable    |No generalisability   |
+|                      | **Causation**                  | **Association**                    |                      |
