@@ -1,0 +1,158 @@
+---
+title: "Week One Unite One Part Two"
+author: "Weijia Chen"
+date: "22 September 2014"
+output: html_document
+---
+
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Visualising Numerical Data
+##### Scatterplot
+1. **_Scatterplots_** can visualise the relationship between two numerical variables. Independent (explanatory) variables are one the $x$ axis, and dependent (response) variables on $y$ axis.
+2. Drasing lines on the **_scatterplots_** can visualise the relationship between explanatory and response variables
+3. Visualisation plot can only explain the **_correlation relationships_** between variables.
+
+####Elements of evaluating the relationships
+
+1. Directions
+    + Positive
+    + Negative
+2. Shape
+    + Linear
+    + Curved
+3. Strength
+    + Strong
+    + Weak
+4. Outliers
+
+#####Histogram
+2. Histogram
+
++ Heights of the bars represent the number of cases that fall into each interval. It provides a view of the **_data density_**. Higher bars represent where data are relatively more common.
++ Especially useful for describing the shape of the distribution.
+
+#####Skewness
+1. Left Skewed, **_Negative end_**
+
+**_Mean < Median_**
+
+```{r, echo=FALSE}
+hist(rbeta(100000,100,2))
+```
+
+2. Right Skewed, **_Positive end_**
+
+**_Mean > Median_**
+
+```{r,echo=FALSE}
+hist(rbeta(100000,2,100))
+```
+
+3. Symmetric
+
+Mean $\approx$ Median
+
+```{r,echo=FALSE}
+hist(rbeta(10000,100,100))
+```
+
+##### Modality
+
+1. Unimodal (One Prominent Peak)
+2. Bimodal (Two Prominent Peak)
+3. Uniform (Non Prominent Peak)
+4. Multimodal (More than two Prominent Peak)
+
+#####Boxplot
+Box plot is useful for highlighting **_outliers, median, IQR (interquartile range)_**
+#####Intensity Map
+
+### Measures of Center
+#####Shape:
+1. Skewness
+2. Modality
+
+#####Measure of Centre
+1. Mean: arithmetic average
+
+$\bar{x}$ represent sample mean; 
+
+$\mu$ represent population mean.
+
+2. Median: midpoint of the distribution ($50^{th}$ percentile)
+3. Mode: most frequent observation
+
+These 3M are **_Sample statictisc_** $\rightarrow$ **_point estimate_** $\rightarrow$ **_Population parameter_**
+
+#####Measure of spread
+
+1. Range: (max-min)
+2. **_Variance_**: roughly the average squared deviation from the mean
+
+$s^2$ represent sample variance;
+**$s^2 = \frac{1}{N-1} \sum_{i =1}^{N} (x_{i} - \bar{x})^2$**
+
+$\sigma^2$ represent population variance
+
++ Get rid of negatives so that negatives and positivies don't cancel each other when added together
++ Increase larger deviations more than smaller ones so that they are weighed more heavily
+
+3. **_Standard Deviation_**
+
+Roughly the average deviation around the mean, and has the same units as the data.
+
+$s$ represent sample standard deviation;
+**$s = \sqrt{\frac{1}{N-1} \sum_{i =1}^{N} (x_{i} - \bar{x})^2}$**
+
+$\sigma$ represent population standard deviation
+
+4. **_Inter-quartile range_**
+
+Range of the middle 50% of the data, distance between the first quartile ($25^{th}$ percentile) and third quartile ($75^{th}$ percentile) 
+
+$IQR = Q3 - Q1$
+
+##### Robust Statistics
+
+IQR and Median are robust statistics, as they are not affected by the skewed values. Robust statistics are for describing thoese with extreme observations.
+
+Mean, SD and Range are non-robust statistics, as they are affected by extreme values. Non-robust statistics are describing symmetric distributions.
+
+##### Transforming Data
+Goals of transformations
+
+1. To see the data structure differently
+2. To reduce skew assist in modeling
+3. To straighten a nonlinear relationship in a scatterplot
+
+### Exploring Categorical Variables
+
+1. **_Single categorical variable_**
+
++ Frequency table, bar plot and pie chart for single categorical variable
+
++ Barplots for categorical variables, histograms for numerical variavles
+
++ x-axis on a histogram is a number line, and the ordering of the bars are not interchangeable
+
+2. **_Two categorical variables_**
+
+**_Contingency table_**, **_segmented bar plot_**, **_relative frequencyegmented bar plot_** and **_mosaicplot_** are for two categorical variables.
+
+Segmented bar plot is useful for visualisaing conditional frequency distributions. The heights of the bars indicate the number of respondents in various income categories.And the bars are segmented by color to indicate the numbers of those who belongs to different categories.
+
+The relative frequency segmented bar plot visualise the percentages in the relative contigency table. 
+
+Mosaicplot:
+
+A mosaic plot displays the distribution of one categorical variable conditional on another categorical variable. It also shows the marginal distribution of the categorical too.
+
+3. **_One numeric variable and one categorical variable_**
+
+Box plot is suitable for this situation. 
+
+Identifying the relationship between a numerical variable across the levels of a categorical variable. x-axis are categorical variable. 
