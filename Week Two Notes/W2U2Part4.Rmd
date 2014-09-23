@@ -11,6 +11,66 @@ options(scipen = 1)
 
 ###Binomial Distribution
 
+####Definition,properties, conditions
+
+The $binomial\ distribution$ describes the probability of having exactly $k$ successes in $n$ **_independent_**Bernouilli trials with the probability of success $p$
+
+$$number \ of\ scenarios * P(single \ scenario)$$
+
+$P(single \ scenario) = p^k (1-p) ^{(n-k)}$
+
+$p^k$ is the probability of success to the power of number of success
+
+$(1-p)^{(n-k)}$ is the probability of failure to the power of number of failures.
+
+#####n choose r
+How many scenarios can be calculated by:
+$$\displaystyle \binom{n}{r} = \frac{n!}{k!(n-k)!}$$
+
+In R:
+
+`choose()`is the funciton to calculate the scenarios
+```{r}
+choose(9,2)
+```
+
+####Calculating probabilities
+
+If $p$ represents probability of success, $(1-p)$ represents probability of failure, $n$ represents number of independent trials, and $k$ represents number of success,
+
+$$P(k \ successes \ in \ n \ trials) = \displaystyle \binom{n}{r} p^k (1-p)^{(n-k)}$$
+
+Where $\displaystyle \binom{n}{r} = \frac{n!}{k!(n-k)!}$
+
+In R, `dbinom()` function can calculate the binomial probability
+
+```{r}
+dbinom(8, size = 10, p = 0.13)
+```
+
+#####Binomial Conditions
+
+1. The trials must be independent
+2. The number of trails, $n$, must be fixed
+3. Each trial outcome must be classified as success or a failure
+4. The probability of success, $p$, must be the same for each trial
+
+####Mean and standard deviation
+
+Expected value (mean) of binomial distribution: $\mu = np$
+
+Standard deviation of binomial distribution: $\sigma = \sqrt{np(1-p)}$
+
 ###Normal Approximation to Binomial
 
-###Working with the Binomial Distribution
+Success-failure rule: A binomial distribution with at least 10 expected successes and 10 expected failures closely follows a normal distribution.
+
+$np \geq 10$
+
+$n(1-p) \geq 10$
+
+Normal approximation to the binomial: If the success-failure condition holds,
+
+$$Binomial(n,p) \sim Normal(\mu, \sigma)$$
+
+Where $\mu = np$ and $\sigma = \sqrt{np(1-p)}$
