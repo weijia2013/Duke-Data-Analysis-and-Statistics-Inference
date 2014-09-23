@@ -49,6 +49,23 @@ options(scipen = 1)
 
 3. Graphically, percentile is the area **_below_** the probability distribution curve to the **_left of that observation_**.
 
+![Alt text](https://raw.githubusercontent.com/weijia2013/Duke-Data-Analysis-and-Statistics-Inference/master/Week%20Two%20Notes/p.png)
+
+`pnorm()` in R can calculate the probability of a given data point.
+
+`qnorm()` in R can calculate the data point based on the give probability.
+
+
+```{r}
+pnorm(-1,mean = 0, sd=1)
+```
 ###Evaluating the Normal Distribution
 
-###Working with the Normal Distribution
+1. Data are plotted on the y-axis of a normal probability plot, and theoretical quantiles(following a normal distribution) on the x-axis.
+2. If there is a one-to-one relationship between the data and the theoretical quantiles, then the data follow a nearly normal distribution.
+3. Since a one-to-one relationship would appear as a straight line on a scatter plot, the closer the points are to a perfect straight line, the more confident we can be that the data follow the normal model.
+4. Constructing a normal probability plot requires calculating percentiles and corresponding z-scores for ach observation, which is tedious.Therefore, we generally on software when making these plots.
+5. Right skew points bend up and to the left of the line.
+6. Left skew points bend down and to the right of the line.
+7. Short tails (narrower than the normal distribution) Points follow an S shaped-curve.
+8. Long tails (wider than the normal distribution) Points start below the line, bend to follow it, and end above it.
