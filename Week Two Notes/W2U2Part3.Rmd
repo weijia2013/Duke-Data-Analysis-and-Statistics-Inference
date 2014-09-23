@@ -21,11 +21,33 @@ options(scipen = 1)
 
 ####68-95-99.7% Rule
 
-68% Falls within one 
+![Alt text](https://raw.githubusercontent.com/weijia2013/Duke-Data-Analysis-and-Statistics-Inference/master/Week%20Two%20Notes/sd.png)
+
+**_68% Falls within one standard deviation of the mean $[\mu - \sigma, \mu + \sigma]$_** 
+
+**_95% Falls within two standard deviation of the mean_ $[\mu - {2} \sigma, \mu + {2} \sigma]$**
+
+**_99% Falls within three standard deviation of the mean $[\mu - {3} \sigma, \mu + {3} \sigma]$_**
 
 ####Standardised Scores ($Z$ score)
 
+1. **_Standardised $Z$ score_** of an observation is **_the number of standard deviation_** it falls above or below the mean.
+
+2. $Z = \frac{observation \ - \ mean}{SD}$
+
+3. $Z$ score of mean = 0; $Z = \frac{mean \ - \ mean}{SD} = 0$
+
+4. Unusual observaiton: $\left| Z \right| > 2$
+
+5. Defined for distributions of any shape
+
 ####Probabilities and percentiles
+
+1. When the distribution is normal, $Z$ scores can be used to calculate percentiles
+
+2. **_Percentile_** is the percentage of observations that **_fall below a given data point_**
+
+3. Graphically, percentile is the area **_below_** the probability distribution curve to the **_left of that observation_**.
 
 ###Evaluating the Normal Distribution
 
