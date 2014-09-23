@@ -5,6 +5,10 @@ date: "22 September 2014"
 output: html_document
 ---
 
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
 ###Introduction
 
 ####Definition of Random Process
@@ -69,7 +73,29 @@ Complementary events are two mutually exclusive events whose probabilities that 
 + Complementary events must be disjoint events, however, disjoint events are not necessarily always complementary events.
 
 ###Independence
+####Independent events
 
-###Probability Examples
+Two processes are **_independent_** if knowing the outcome of one provides no useful information about the outcome of the other.
+
+#####General Rules for checking independence
+
+$P(A \ | \ B) = P(A)$, Then A and B are independent.
+
+**_B means given_**.
+
+####Assessing Independence
+
+If A and B are independent, $P(A \ and \ B) = P(A) * P(B)$.
+
+####Multiplication rule for independent events
+
+If $A_{1}, A_{2}, ... A_{k}$ are independent, $P(A_{1} \ and \ P_{2} \ and ... P_{k}) = P(1) * P(2) * ... * P(k)$ 
 
 ###Disjoint VS Independent
+
+In fact, there is no meanings to compare these two terminology. 
+
+Disjoint discusses about one process which includes two events, A and B. Events A and B are disjoint means that they cannot happen at the **_same time_** (one process, e.g. flip coin, head and tail cannot happen at one process filp).
+$P(A \ and \ B) = 0$
+
+Independent discusses the conditions about A and B, this mean that there are at least two processes. First, process the outcome of event A. Then, looking the outcomes of event B which is affected or not by event A. It discusses the conditional situaitons. $P(A \ | \ B) = P(A)$

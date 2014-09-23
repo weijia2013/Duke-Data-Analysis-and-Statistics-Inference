@@ -1,0 +1,38 @@
+---
+title: "Week Two Unit 2 Part Two"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Conditional Probability
+
+####Marginal, joint, conditional probability
+
+1. **_Marijinal probability_** comes from the fact that the counts that is used to calculate the probability came from the margins of the contingency table
+
+2. **_Joint probability_** means to calculate the probability that event A and event B that happens at the same time. $Joint \ Probability = P(A \ and \ B)$
+
+3. **_Conditional Probability_** measures the probability of an event given that (by assumption, presumption, assertion or evidence) another event has occurred. $Conditional \ Probability = P(A \ | \ B)$
+
+####Bayes' Theorem
+
+$$P(A \ | \ B) = \frac{P(A \ and \ B)}{P(B)}$$
+
+####General product rules
+
+Generically, if $P(A \ | \ B) = P(A)$, then the events A and B are said to be independent.
+
++ Conceptually: Given B doesn't tell us anything about A.
++ If events A and B are independent, 
+
+$P(A \ and \ B) = P(A) * P(B)$, 
+
+$P(A \ | \ B) = \frac{P(A \ and \ B)}{P(B)}$. 
+
+Therefore, $P(A \ | \ B) = \frac{P(A) * P(B)}{P(B)} = P(A)$
+

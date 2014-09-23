@@ -1,0 +1,32 @@
+---
+title: "Week Two Unit 2 Part 3"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Normal Distribution
+
+####Normal Distribution
+
++ Unimodal and symmetric
++ Bell curve
++ Follows very strict guidelines about how variably the data are distributed around the mean
++ Many variables are nearly normal, but none are exactly normal
++ $N(\mu, \sigma)$
+
+####68-95-99.7% Rule
+
+68% Falls within one 
+
+####Standardised Scores ($Z$ score)
+
+####Probabilities and percentiles
+
+###Evaluating the Normal Distribution
+
+###Working with the Normal Distribution
