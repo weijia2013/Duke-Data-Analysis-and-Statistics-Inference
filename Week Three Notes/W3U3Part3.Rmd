@@ -1,0 +1,41 @@
+---
+title: "Week 3 Unit 3 Part 3"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Another Introduction to Inference
+
+1. We start with a ***null hypothesis $\left ( H_{0} \right )$*** that represents the status quo.
+
+2. We also have an ***alternative hypothesis $\left ( H_{A} \right )$*** that represents our research question, i.e. what we're testing for.
+
+3. We conduct a hypothesis test under the assumption that the null hypothesis is true, either via simulation or theoretical methods ---- methods that rely on the CLT 
+
+4. If the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, we stick with the null hypothesis. If they do, then we reject the null hypothesis in favor of the alternative.
+
+###Hypothesis Testing (for a mean)
+
+####Hypothesis testing via CI
+
+***Null - $H_{0}$***: Often either a skeptical perspective or a claim to be tested. Always start with $=$
+
+***Alternative - $H_{A}$***: Represents an alternative claim under consideration and is ofern represented by a range of possible parameter values. On side: $> or  <$ ; Two side: $\ne$
+
+The skeptic will not abandon the $H_{0}$ unless the evidence in favor of the $H_{A}$ is so strong that she rejects $H_{0}$ in favor of $H_{A}$
+
+####Formal hypothesis testing using p-values
+
+P-value:
+
+$$P \left( oberverd \ or \ more \ extreme \ outcome \ | \ H_{0} \ true \right)$$
+
+If the p-value is low (lower than 0.05 or 5% which is the ***significance level***, $\alpha$), we say that if would be very unlikely to observe the data if the null hypothesis were true, and hence ***reject $H_{0}$***
+
+If the p-values is high (higher than $\alpha$) we say that it is likely to observe the data even if the null hypothesis were true, and hence ***do not reject $H_{0}$***
+
