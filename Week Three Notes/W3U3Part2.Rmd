@@ -1,0 +1,88 @@
+---
+title: "Week 3 Unit 3 Part 2"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Confidence Interval (for a mean)
+
+####Definition of Confidence Interval
+
+A plausible range of values for the population parameter is called a **_Confidence Interval_**
+
++ If we report a point estimate, we probably won't hit the exact populaiton parameter
++ If we report a range of plausible values we have a good shot at capturing the parameter.
++ Approximate 95% CI: $\bar{x} \pm 2SE$
++ $2SE$ means the **_margin of error_** ($ME$) for 95% CI.
+
+**_Confidence interval for a population mean_**: Computed as the sample mean plus/minus a margin of error (critical value corresponding to the middle XX% of the normal distribution times the standard error of the sampling distribution).
+
+$$\bar{x} \pm z^* \frac{s}{\sqrt n}$$
+
+$SE \ (Standard \ Error) = \frac{s}{\sqrt n}$
+
+####Conditions
+
+1. **_Independence_**: Sampled observation must be independent.
++ Random sample/assignment
++ If sampling without replacement, n < 10% of population
+
+2. **_Sample size/skew_**:
+
+$n \geq 30$, larger if the population distribution is very skewed.
+
+In R, use the funciton `qnorm()` to calculate the $z^*$ score.
+
+```{r}
+qnorm(0.025)
+```
+
+###Accuracy vs Precision
+
+####Confidence Level
+
+1. Suppose we took many samples and built a confidence interval from each sample using the equation:
+
+$$point \ estimate \pm 1.96 * SE$$
+
+
+2. Then about 95% of those intervals would contain the true population mean ($\mu$)
+
+3. Commonly used confidence levels in practice are 90%, 95%, 98% and 99%
+
+4. The critical value of $z^*$ for a 90% confidence interval is 1.65
+
+4. The critical value of $z^*$ for a 95% confidence interval is 1.96
+
+5. The critical value of $z^*$ for a 98% confidence interval is 2.33
+
+6. The critical value of $z^*$ for a 99% confidence interval is 2.58
+
+7. As the confidence level increase the interval gets wider.
+
+8. The confidence interval is not about individuals in the population, but instead, about the true population parameter.
+
+9. The percentage of random samples will yield confidence intervals that contains the true population parameter.(
+
+###Required Sample Size for ME
+
+####Sample size vs Accuracy
+
+#####Backtracking to n for a given ME
+
+Given a target margin of error, confidence level, and information on the variability of the sample (or the population), we can determin the required sample size to achieve the desired margin of error.
+
+$ME = z^* \frac{s}{\sqrt n} \to n = \left ( \frac{z^*s}{ME} \right )^2$ 
+
+###CI (for the mean) examples
+
+***The confidence interval, is always about unknow population mean, and the confidence level tell us how confident we are that this particular interval captures that mean.***
+
+Before calculating, when using CLT, the first step always to check the condicitons of the CLT.
+
+***Confidence Interval*** always has to be symmetric, it is always about the middle whatever percent of the distribution. 
