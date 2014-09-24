@@ -1,0 +1,64 @@
+---
+title: "Week Three Unit 3 Part 1"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Sampling Variability and CLT
+
+####Sampling distribution
+
+The standard deviation of the sample means is named as standard error. The sample size increase, the SE will be decreased.
+
+####CLT + conditions for CLT
+
+**_Central Limit Theorem (CLT)_**: The distributio of sample statistics is nearly normal, centered at the population mean, and with a standard deviation equal to the population standard deviation divided by square root of the sample size.
+
+$$\bar{x} \sim N(mean = \mu, SE = \frac{\sigma}{\sqrt n})$$
+
+N: illustrates the shape of sample distribution
+
+$\mu$: means centre
+
+$SE$: means spread
+
+**_Conditions for the CLT_**:
+
+1. **_Independence_**: Sampled observations must be independent.
++ Random sample/assignment
++ If sampling without replacement, n < 10% of population
+2. **_Sample size/skew_**: Either the population distribution is normal, or if the population distribution is skewed, the sample size is large (rule of thumb: n > 30)
+
+According to CLT, if the **_population distribution_** is normal, the sampling distribution will be normal as well, regardless the sample size.
+
+###CLT (for the mean) examples
+
+**_When applying CLT to calculate the Z score_**: 
+
+$$Z = \frac{observation - \mu }{SE}$$
+
+Because the **_observation_** of interest is the sample mean, not an individual observation.
+
+**_We measure the variability of individual observations with standard deviations. We measure the variability of sample means with standard errors._**
+
+The differences of expression between the individual observation and sample mean observation is:
+
+$P(X > 6 \ (value))$
+
+$P(\bar{X} >6 \ (value))$
+
+
+
+
+
+
+
+
+
+
+
