@@ -1,0 +1,76 @@
+---
+title: "Week 3 Unit 3 Part 5"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Decision Errors
+
+####Type I and type II errors
+
+|               |               |               Decision                          |
+|--------------:|--------------:|----------------------:|------------------------:|
+|               |               |fail to reject $H_{0}$ |    reject $H_{0}$       |
+|     Truth     |$H_{0}$ true   |     $1 - \alpha$      |Type I error, $\alpha$   |
+|               |$H_{A}$ true   |Type II error, $\beta$ |    $1 - \beta$          |
+
+1. $Type \ I \ error$ is rejecting $H_{0}$ when you shouldn't have, and the probability of doing so is $|\alpha$ (significance level).
+
+2. $Type \ II \ error$ is failing to reject $H_{0}$ when you should have, and the probability of doing so is $\beta$.
+
+3. ***Power*** of a test is the probability of correctly rejecting $H_{0}$, and the probability of doing so is $1 - \beta$
+
+####Balancing error rates
+
+1. $H_{0}$ should be rejected when the $p$-value is less than 0.05 ($\alpha = 0.05$)
+
+2. This means that, for those cases where $H_{0}$ is actually true, we do not want to incorrectly reject it more than 5% of those times.
+
+3. In other words, when using a 5% significance level there is about 5% chance of making a $Type \ I$ error if the null hypothesis is true. 
+
+$$P \left( Type \ I \ error \ | \ H_{0} \ true \right ) = \alpha$$
+
+4. This is why we prefer small values of $\alpha$, increasing the $\alpha$, increasinghe Type I error rate.
+
+5. ***$\beta$*** depends on the ***effect size $\left (\delta \right )$***. Differences between point estimate and null value.
+
+###Significance vs Confidence Level
+
+1. Two side HT, with $\alpha = 0.05$ $\Leftrightarrow$ 95% confidence interval.
+
+2. One side HT, with $\alpha = 0.05$ $\Leftrightarrow$ 90% confidence interval.
+
+3. ***A two sided hypothesis with threshold of $\alpha$ is equivalent to a confidence interval with $CL = 1- \alpha$***
+
+4. ***A one sided hypothesis with threshold of $\alpha$ is equivalent to a confidence interval with $CL = 1 - \left ( 2 * \alpha \right )$.*** 
+
+5. If $H_{0}$ is rejected, a confidence interval that agrees with the result of the hypothesis test should not include the null value.
+
+6. If $H_{0}$ is failed to be rejected, a confidence interval that agrees with the result of the hypothesis test should include the null value.
+
+###Statistical vs Practical Significance
+
+1. Real differences between the point estimate and null value are easier to detect with larger samples.
+
+2. However, very large samples will result in statistical significance wven for tiny differences between the sample mean and the null value (effect size), even when the differenct is not practically significant.
+
+3. A priori analysis before you actually do the data collection to figure out, based on characteristics of the variable you are studying, how many observations to collect. 
+
+4. Significance level = Margin of Error
+
+5. Priori test example:
+
+$n = \left ( \frac{z^*s}{ME} \right )^2$
+
+95% CI means $z^* = 1.96$
+
+$ME$ = $SI$ = 0.05
+
+$standard deviation$ = $s = 0.5$ is the safe decision to ensure the enough sample size
+
+$n = \left ( \frac{1.96*0.5}{0.05} \right ) ^ 2$ = 384.16 $\approx$ 385
