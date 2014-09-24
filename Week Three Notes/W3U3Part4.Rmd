@@ -1,0 +1,13 @@
+---
+title: "Week 3 Unit 3 Part 4"
+author: "Weijia Chen"
+date: "23 September 2014"
+output: html_document
+---
+
+```{r, results='hide', echo=FALSE}
+options(scipen = 1)
+```
+
+###Inference for Other Estimators
+
